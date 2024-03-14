@@ -1,0 +1,29 @@
+{
+  "name": "learning-node-js",
+  "version": "1.0.0",
+  "description": "It is a project to learn and practice spring boot. This project is based on applying the TDD methodology, so first the tests have been developed and then the implementation of the same.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc && nodemon --env-file=.env ./dist/app.js",
+    "production": "node ./dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pPlanello/learning-node-js.git"
+  },
+  "keywords": [
+    "TDD",
+    "learning"
+  ],
+  "author": "pPlanello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pPlanello/learning-node-js/issues"
+  },
+  "homepage": "https://github.com/pPlanello/learning-node-js#readme",
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  }
+}
