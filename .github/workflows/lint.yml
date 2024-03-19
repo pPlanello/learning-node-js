@@ -1,0 +1,30 @@
+name: Lint Code
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '21.x'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Deploy if lint passes
+        if: ${{ success() }}
+        run: |
+          echo "Lint pass correctly!!!"
