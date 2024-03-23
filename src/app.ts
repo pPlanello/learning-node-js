@@ -1,1 +1,5 @@
-console.log('Hello world!');
+import Server from './server/Server';
+
+const server = new Server();
+
+server.listen();

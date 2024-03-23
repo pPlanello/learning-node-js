@@ -1,6 +1,6 @@
 {
 	"name": "learning-node-js",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"author": "pPlanello",
 	"description": "It is a project to learn and practice spring boot. This project is based on applying the TDD methodology, so first the tests have been developed and then the implementation of the same.",
 	"repository": {
@@ -20,9 +20,10 @@
 		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json|tsx|jsx)\"",
 		"lint": "eslint src/**/*.ts",
 		"production": "node ./dist/app.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "jest"
 	},
 	"dependencies": {
+		"dotenv": "^16.4.5",
 		"express": "^4.19.1",
 		"express-validator": "^7.0.1"
 	},
@@ -32,12 +33,17 @@
 	},
 	"homepage": "https://github.com/pPlanello/learning-node-js#readme",
 	"devDependencies": {
+		"@types/express": "^4.17.21",
+		"@types/jest": "^29.5.12",
+		"@types/node": "^20.11.30",
 		"@typescript-eslint/eslint-plugin": "^7.3.1",
 		"@typescript-eslint/parser": "^7.3.1",
 		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.1.3",
+		"jest": "^29.7.0",
 		"prettier": "^3.2.5",
+		"ts-jest": "^29.1.2",
 		"typescript": "^5.4.2"
 	}
 }
