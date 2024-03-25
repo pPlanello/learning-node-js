@@ -4,10 +4,9 @@ import Server from '../../src/server/Server';
 
 describe('Hello World Controller', () => {
 	let app: express.Application;
-	let server: Server;
+	const server: Server = new Server();
 
 	beforeEach(() => {
-		server = new Server();
 		app = server.getApplication();
 	});
 
@@ -24,5 +23,11 @@ describe('Hello World Controller', () => {
 			success: true,
 			message: 'Hello World',
 		});
+	});
+
+	it('should respond with a status 404 when route is not exist /', async () => {
+		const response = await request(app).get('/api/not-existing-route');
+
+		expect(response.status).toBe(404);
 	});
 });
